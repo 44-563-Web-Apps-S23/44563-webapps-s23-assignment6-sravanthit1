@@ -25,14 +25,14 @@ function checkPainter (){
    
     if(PainterN==GuessN){
         good++;
-        out.innerHTML = "correct "+good+"  wrong "+oops;
+      
         alert("You got it right");
     } else {
         oops++;
-        out.innerHTML = "correct "+good+"  wrong "+oops;
+     
         alert("Sorry");
     }
-     
+     document.getElementById("result").innerHTML="correct "+good+" wrong "+oops;
 }
 </script>
 <div class="container">
