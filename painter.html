@@ -4,7 +4,6 @@
 <body>
 <h2>Painter entry by Sravanthi Thukivakam</h2>
 <h2>Getting input</h2>
-
 <form>
     <label for="form1_passw">The hidden painter name</label>
     <input type ="password" id="form1_passw" name="form1_passw" value="Monet"> <br>
@@ -15,7 +14,6 @@
     <input type="button" onclick="checkPainter()" value="Check the guess">
 </form>
 <p id="result">count will display here</p>
-
 <script> 
 good=0
 oops=0
@@ -36,7 +34,31 @@ function checkPainter (){
     }
 }
 </script>
+<div class="container">
+    <img id="picture" src="Hybiscus.jpg" height="100" weight="100" onclick="selectImage()">
+</div>
+<script>
+    var useImage=1
+    var img=document.getElementById("picture")
+    function selectImage(){
+        switch(useImage){
+            case 1:
+                img.src="tulsi.jpg"
+                useImage++
+                break
+            case 2:
+                img.src="urn.jpg"
+                useImage++
+                break
+            case 3:
+                img.src="Hybiscus.jpg"
+                useImage=1
+                break
+            default:
+        }
+    }
+</script>
+
 
 </body>
 </html> 
-
