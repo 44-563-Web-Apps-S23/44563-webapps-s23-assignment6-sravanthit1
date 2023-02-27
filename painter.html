@@ -22,7 +22,7 @@ function checkPainter (){
     PainterN = document.getElementById("form1_passw").value
     GuessN = document.getElementById("form1_guessp").value
     
-    out = document.getElementById("result")
+    out = document.getElementById("result").innerHTML="correct "+good+"  wrong "+oops;
     if(PainterN==GuessN){
         good++;
         out.innerHTML = good
