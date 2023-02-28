@@ -39,7 +39,7 @@ function selectBox (){
     my_candy_box.dark=document.getElementById("DarkChocolate").checked;
     my_candy_box.nuts=document.getElementById("Nuts").checked;
     my_candy_box.chewy=document.getElementById("Chewy").checked;
-    document.getElementById("result").innerHTML=JSON.stringify(my_candy_box);
+    document.getElementById("result").innerHTML="The box selected is: "+JSON.stringify(my_candy_box);
     
 }
 
@@ -50,7 +50,7 @@ function updateBox(){
         my_candy_box.size=Size
         my_candy_box.price=Price
         
-        document.getElementById("result").innerHTML=JSON.stringify(my_candy_box);
+        document.getElementById("result").innerHTML="The Updated Box is: "+JSON.stringify(my_candy_box);
     }
 </script>
 
