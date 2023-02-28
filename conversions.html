@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Currency Conversions Page!</title></head>
+<body>
+
+<h2>Sravanthi Thukivakam shows currency conversions</h2>
+
+<form>
+    <label for="form1_amount">Enter base amount</label>
+    <input type ="number" id="form1_amount" name="form1_amount" value=50> <br>
+
+    <label for="form1_rate">Enter the conversion rate.</label>
+    <input type ="number" id="form1_rate" name="form1_rate" value=35> <br>
+
+    <input type="button" onclick="convert()" value="Show conversions ">
+</form>
+
+
+<p id="result">value is converted value</p>
+
+<script> 
+
+function convert (){
+    
+    baseamt = document.getElementById("form1_amount").value
+    convrate = document.getElementById("form1_rate").value
+    toShow = ""
+    for (i = 1; i <= 5; i++) {
+        toShow = baseamt +" is "+ Math.round(convrate*baseamt*100)/100+"; "+
+                 baseamt*2+" is " +Math.round(convrate*baseamt*2*100)/100+ "; "+
+                 baseamt*4 +" is " +Math.round(convrate*baseamt*4*100)/100+ "; "+
+                 baseamt*8 +" is " +Math.round(convrate*baseamt*8*100)/100+ "; "+
+                 baseamt*16 + " is " +Math.round(convrate*baseamt*16*100)/100+ "; "
+        }
+    out = document.getElementById("result")
+    if(toShow){
+        out.innerHTML = "Conversions are: " + toShow
+    } 
+}
+</script>
+
+</body>
+</html> 
