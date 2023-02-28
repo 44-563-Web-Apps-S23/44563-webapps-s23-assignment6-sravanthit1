@@ -40,13 +40,13 @@ function convert (){
 </script>
 
 <form>
-    <input type="radio" id="average" name="average" value="mean" onclick="chooseOp()" checked>
+    <input type="radio" id="average" name="sele" value="mean" onclick="chooseOp()" >
     <label for="average">average</label></br>
   
-    <input type="radio" id="max" name="max" value="maximum" onclick="chooseOp()" >
+    <input type="radio" id="max" name="sele" value="maximum" onclick="chooseOp()" >
     <label for="max">maximum</label></br>
   
-    <input type="radio" id="min" name="min" value="minimum" onclick="chooseOp()" >
+    <input type="radio" id="min" name="sele" value="minimum" onclick="chooseOp()" >
     <label for="min">minimum</label></br>
 
     <input type="button" onclick="chooseOp()" value="Get values from radio group">
@@ -54,19 +54,18 @@ function convert (){
 <p id="resultRadio">the result for radio button will be displayed here</p>
 
 <script>
+    
     function chooseOp(){
               baseamt = document.getElementById("form1_amount").value
               convamt = document.getElementById("form1_rate").value
-              avg = document.getElementById("average").checked
-              max = document.getElementById("max").checked
-              min = document.getElementById("min").checked
-    
+
               out = document.getElementById("resultRadio")
-              if(avg==true){
-                  result = (baseamt*convamt/2)
+
+              if((document.getElementById("average").checked)){
+                  result = ((baseamt*1+convamt*1)/2)
                   out.innerHTML = "Average of "+baseamt+" and "+convamt+" is "+result
               }
-              if(max==true){
+              if((document.getElementById('max').checked)){
                    if(baseamt>convamt)
                      result = baseamt
                    else
@@ -74,7 +73,7 @@ function convert (){
 
                      out.innerHTML = "Max of "+baseamt+" and "+convamt+" is "+result
               }
-              if(min==true){
+              if((document.getElementById('min').checked)){
                 if(baseamt<convamt)
                      result = baseamt
                    else
