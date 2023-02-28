@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Candy Page!</title></head>
+<body>
+
+<h2>Sravanthi Thukivakam chooses candy</h2>
+
+<form>
+    <input type="checkbox" id="DarkChocolate" name="topping1" value="True">
+        <label for="Dark Chocolate">Dark Chocolate</label></br>
+      
+    <input type="checkbox" id="Nuts" name="topping2" value="True">
+        <label for="Nuts">Nuts</label></br>
+      
+    <input type="checkbox" id="Chewy" name="topping3" value="False">
+        <label for="Chewy">Chewy</label></br>
+
+    <input type="button"class="btn btn-secondary"  type="button" onclick="selectBox()" value="Select a box ">
+</form>
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+my_candy_box={}
+function selectBox (){
+    my_candy_box={}
+    my_candy_box.dark=document.getElementById("DarkChocolate").checked;
+    my_candy_box.nuts=document.getElementById("Nuts").checked;
+    my_candy_box.chewy=document.getElementById("Chewy").checked;
+
+    document.getElementById("result").innerHTML=JSON.stringify(my_candy_box);
+}
+</script>
+
+</body>
+</html> 
