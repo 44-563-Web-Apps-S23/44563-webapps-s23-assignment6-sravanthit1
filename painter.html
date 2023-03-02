@@ -32,7 +32,17 @@ function checkPainter (){
      
         alert("Sorry");
     }
+    if(oops>=10){
+       ShowAlert()
+       document.getElementById('togglee').style.visibility = 'hidden';
+    
+    }
      document.getElementById("result").innerHTML="correct "+good+" wrong "+oops;
+}
+
+function ShowAlert(){
+    alert("Sorry, ran out of guesses")
+    
 }
 </script>
 <div class="container">
